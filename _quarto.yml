@@ -1,0 +1,82 @@
+project:
+  type: default  # または website, book, manuscript
+
+format:
+  # HTML設定
+  html:
+    theme: lumen  # 他の選択肢: cerulean, journal, simplex, etc.
+    highlight-style: a11y  # 他の選択肢: tango, github, pygments, etc.
+    toc: true  # 目次を表示
+    toc-location: right  # 目次の位置: left, right
+    toc-depth: 4  # 目次の階層深度
+    number-sections: true  # セクション番号を表示
+    embed-resources: false  # 外部リソースを埋め込むかどうか
+    code-fold: false  # コードを折りたたむ
+    # css: style.css  # 独自CSSファイルの指定
+    # include-in-header: header.html  # カスタムヘッダーHTMLを挿入
+    # include-before-body: before_body.html  # ボディ前に挿入
+    # include-after-body: after_body.html  # ボディ後に挿入
+    lang: ja  # 言語指定: ja, en, etc.
+    # fig-width: 6  # 図の幅
+    # fig-height: 4  # 図の高さ
+    # fig-format: png  # 図の形式: png, jpeg, svg, etc.
+    fig-dpi: 450  # 図の解像度
+    # df-print: paged  # データフレームの表示形式: paged, kable, etc.
+    # mathjax: default  # MathJaxを有効化
+    self-contained: true  # HTMLを1ファイルにまとめる
+
+  # PDF設定（必要ならコメントアウトを外して使用）
+  # pdf:
+  #   pdf-engine: lualatex  # 他の選択肢: xelatex, pdflatex
+  #   documentclass: ltjsarticle  # 他の選択肢: article, report, book
+  #   classoption:
+  #     - a4paper
+  #     - 10pt  # フォントサイズ
+  #     - oneside  # 両面印刷: twoside, oneside
+  #   toc: true  # 目次を表示
+  #   toc-depth: 3  # 目次の深度
+  #   number-sections: true  # セクション番号を表示
+  #   geometry: margin=1in  # ページのマージン設定
+  #   keep-tex: true  # .texファイルを保持
+  #   linkcolor: blue  # リンクの色
+  #   fontsize: 12pt  # フォントサイズ
+  #   linestretch: 1.5  # 行間の調整
+  #   colorlinks: true  # カラフルなリンク
+  #   papersize: a4  # ペーパーサイズ: a4, letter
+  #   fig-pos: h  # 図の配置: h, t, b, p
+  #   draft: false  # ドラフトモード: true, false
+
+  # スライド設定（reveal.js）
+  # revealjs: 
+  #   width: 1600  # スライド幅
+  #   height: 900  # スライド高さ
+  #   slide-number: true  # スライド番号を表示
+  #   toc: true  # スライドの目次
+  #   toc-depth: 2  # 目次の深度
+  #   transition: fade  # トランジションの種類: none, fade, slide, convex, concave, zoom
+  #   transition-speed: fast  # トランジション速度: default, fast, slow
+  #   theme: white  # スライドテーマ: black, white, league, beige, etc.
+  #   highlight-style: github  # コードハイライトスタイル
+  #   center: true  # スライドを中央に配置
+  #   chalkboard: true  # 黒板モード
+  #   history: true  # スライドの履歴を保持
+  #   mousewheel: true  # スライドの移動をマウスホイールで制御
+  #   auto-slide: 5000  # 自動スライド（ms単位）
+  #   controls: true  # スライドコントロールを表示
+
+knitr: 
+  opts_chunk: 
+    dev: ragg_png  # 文字化け防止
+    dpi: 300       # 解像度
+    fig-align: center  # 図の中央揃え
+    warning: false  # 警告メッセージ非表示
+    message: false  # メッセージ非表示
+    # fig-path: "figures/"  # 図の保存ディレクトリ
+    # cache: true  # チャンクのキャッシュ
+    # echo: false  # コードを表示しない
+    # error: true  # エラーメッセージを表示
+
+# 参考文献設定
+bibliography: references.bib  # BibTeXファイルを指定
+csl: apa7.csl  # APA7スタイル
+link-citations: true  # 引用にリンクを付加
